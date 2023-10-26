@@ -54,25 +54,20 @@ class ProductManager{
     }  
     // Update product
     updateProduct(id){
-        let indiceID=this.products.findIndex(product=>product.id===id)
-                
-        if(indiceID=== -1){
-            console.log(`the id request dosent exist `)
-            return
-        }
-        return this.products[indiceID]; 
-    }
-
+        
     }
     // Borrar producto
     deleteProduct(id){
         let indiceID=this.products.findIndex(product=>product.id===id)
-                
+        let deleted = false;
         if(indiceID=== -1){
             console.log(`the id request dosent exist `)
             return
+        }else{
+         this.products[indiceID] = deleted = true;
+         console.log('the product is deleted')
         }
-        return this.products[indiceID]; 
+        
     }
 
 
@@ -86,5 +81,8 @@ pm.addProduct('Musculosa','musculosa amarilla','700','sin imagen', '5501', "20")
 console.log(pm.getProduct());
 console.log(pm.getProductbyID(20));
 console.log(pm.getProductbyID(2));
+console.log(pm.deleteProduct(1));
+console.log(pm.getProduct());
+
 
 
