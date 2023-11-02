@@ -98,6 +98,9 @@ class ProductManager{
 
 } // fin clase
 
+// Se exporta la clase para que sea utilizada en la app
+module.exports = ProductManager
+
 let pm=new ProductManager('./Archivo/productList.json')
 pm.addProduct('pantalonJS','pantalon de jean largo','500','sin imagen', '5000', '10')
 pm.addProduct('Remera MC','Remera mangas cortas','700','sin imagen', '5323', "7")
